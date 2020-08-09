@@ -1,0 +1,38 @@
+{
+  "name": "elec",
+  "version": "3.0.0",
+  "description": "",
+  "main": "./src/app/main.js",
+  "build": {
+    "files": [
+      "package.json",
+      "./src/**"
+    ],
+    "appId": "counter.vld",
+    "mac": {
+      "category": "counter.vld.category.id"
+    },
+    "publish": {
+      "provider": "s3",
+      "bucket": "elec-app-12345",
+      "region": "eu-central-1"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^3.4.1",
+    "electron-reload": "^1.5.0",
+    "electron-updater": "^4.3.4",
+    "lodash": "^4.17.19"
+  },
+  "devDependencies": {
+    "electron": "^9.1.2",
+    "electron-builder": "^22.8.0"
+  }
+}
